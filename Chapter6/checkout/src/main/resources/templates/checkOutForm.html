@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h2 class="text-center">Checkout</h2>
+  <form name="checkOutEntity" action="/submitCheckOut" method="post">
+    <div class="form-group">
+      <label for="member">Member:</label>
+      <input type="text" class="form-control" id="memberId" name="memberId" value="10001" required>
+    </div>
+    <div class="form-group">
+      <label for="product">Product:</label>
+      <input type="text" class="form-control" id="productId" name="productId" value="999999" required>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control" id="amount" name="amount" value="33000" required>
+    </div>
+    <div class="form-group">
+      <label for="shipping-address">Shipping Address:</label>
+      <textarea class="form-control" id="shippingAddress" name="shippingAddress" value="서울시 종로구"
+                required></textarea>
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">결재하기</button>
+  </form>
+</div>
+</body>
+</html>
